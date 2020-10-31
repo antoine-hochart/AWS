@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Rekognition - Facial Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <section>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="control-label h1">Amazon Rekognition</label>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-danger btn-xs remove-preview">
+                    <i class="fa fa-times"></i> reset
+                  </button>
+                </div>
+                <div class="dropzone-wrapper">
+                  <div class="dropzone-desc">
+                    <i class="glyphicon glyphicon-download-alt"></i>
+                    <div>choose an image file or drag it here</div>
+                  </div>
+                  <input type="file" name="img_logo" class="dropzone" \>
+                </div>
+                <div class="preview-zone hidden">
+                  <div class="box box-solid">
+                    <div class="row justify-content-center m-2">
+                      <div class="column">
+                        <div class="box-header with-border">PREVIEW</div>
+                        <div class="box-body" id="preview"></div>
+                      </div>
+                      <div class="column">
+                        <div class="box-header with-border">FACIAL ANALYSIS</div>
+                        <div id="analysis"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row justify-content-center m-2">
+                <input class="btn btn-info m-1"
+                       type=button value="WHAT IS YOUR MOOD TODAY?" onClick="rekognize()">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row justify-content-center m-2">
+                <div id="result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="static/app.js"></script>
+  </body>
+</html>
